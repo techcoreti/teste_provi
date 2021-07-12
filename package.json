@@ -8,7 +8,7 @@
   "scripts": {
     "test": "jest",
     "dev": "set NODE_DEV=dev&& nodemon --inspect src/loader.js --igonore __testes__, __Docs__",
-    "production": "pm2 start src/loader.js --name api-core-application"
+    "production": "set NODE_DEV=production&& pm2 start src/loader.js --name api-core-application"
   },
   "apidoc": {
     "title": "Teste Provi - Api Doc.",
