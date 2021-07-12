@@ -1,9 +1,9 @@
 # Teste Provi
-Esta API foi desenvolvida com a intenção de demonstrar um pouco do meu conhecimento como desenvolvedor backend NodeJs, todos os recursos utilizados para o desenvolvimento forma aplicados na sua mais simples forma.
-Escolhi entregar um conteudo mais completo e abrangente, utilizando de algumas técnologias que esrão descritas abaixo.
+Esta API foi desenvolvida com a intenção de demonstrar um pouco do meu conhecimento como desenvolvedor backend NodeJs, todos os recursos utilizados para o desenvolvimento foram aplicados na sua mais simples forma.
+Escolhi entregar um conteudo mais completo e abrangente, utilizando de algumas técnologias que serão descritas abaixo.
 
 # Tecnologias
-NodeJs, Express, PostGres, documentação (ApiDoc), consumo da Api Spotify
+NodeJs, Express, Postgres, documentação (ApiDoc), consumo da Api Spotify
 
 # Descrição
 Api foi concebida para ser scalável de forma simples e rápida, foi efetuado a separação dos módulos aplicando a cada um deles a sua respectiva responsabilidade, isto permite que o projeto de cresca de forma simples e rápida .
@@ -43,4 +43,20 @@ Permite que sejam efetuadas cadastros de empresas, contatos, filiais, funcionár
           registro na tabela, se o mesmo for persistido com sucesso, é integrado na resposta o ID único utilizado na chave primária, caso o registro já exista na tabela
           é retornado os dados puros encontrados.
      
-      
+Foi utilizado o middlewares Cors e Helmet na construção, permitindo aumentar a segurança da aplicação.
+Para documentação dos recursos da API, foi utilizado a ferramenta APiDocs para documentação publica da API.
+
+# Distribuição dos módulos e responsabilidades
+    loader.js  -- Carrega o servidor express
+    Routes     -- Contém todas as rotas aplicadas ao serviço, permite separação por modelos
+    Business   -- Contém todas as regra de negócios da API, efetua a validação dos dados, permitindo ou recusando retornando a validação em forma de objeto
+    Dao        -- Aqui são tratados todos os métodos que tem atuação ao ambiente externo da API, seja para persistencia dos dados no banco, arquivos, logs ou mesmo para consulta                   de serviços de terceiros
+    Config     -- Arquivo responsável por parametrizar a aplicação, controlado pela variavel de ambiente NODE_DEV
+    Connection -- Arquivo que efetua a conexão com a base de dados, abrindo um pool de comunicação, esta técnica melhora o desempenho da aplicação uma vez que mantém a conexão
+                  aberta por um tempo determinado se não houver consultas, efetua o reaproveitamento da conexão fazendo com que não seja efetuada uma nova conexão com o 
+                  banco a cada solicitação. 
+    __docs__   -- Templates de documentação, utilizado para documentar publicamente se necessário todos os recursos da API, utiliza da ferramenta ApiDocs.
+
+# Simulação Jwt
+  Criado uma função para fornecer u mtoke jwt com base no cadastro, dados fixado para efeito de testes.
+  Criado uma função que valida o token para todas as chamadas a API
