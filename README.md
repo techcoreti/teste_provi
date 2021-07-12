@@ -60,3 +60,26 @@ Para documentação dos recursos da API, foi utilizado a ferramenta APiDocs para
 # Simulação Jwt
     Criado uma função para fornecer u mtoke jwt com base no cadastro, dados fixado para efeito de testes.
     Criado uma função que valida o token para todas as chamadas a API
+
+# Execução do projeto
+    Endereço de acecsso com ambiente já montado:  http://3.235.160.57:3000
+    
+    Para execução do projeto é necessário, ajustar todas as configurações para o seu perfeito funcionamento.
+    Antes de rodar o projeto execute npm install na pasta do projeto.
+    Se desejar verificar a geração da documentação, instale também o apcote ApiDocs "npm install apidoc -g"
+    Para gerar a nova documentação se necessário, digite no terminal dentro da pasta do projeto apidoc -i src/ -o public/, será criado uma pasta com a documentação para
+    visualização web.
+    
+    Ajuste do arquivo .env e .env.production conforme o ambiente. 
+    1 - Defirnir os parâmetros de acesso ao banco de dados.
+    2 - Definir a porta de execução da API.
+    3 - Definir o token obtido no spotify
+    4 - Definir a senha de geração do token de acesso a API
+    5 - Obter o token de acesso a API.
+      5.1 - Para que seja obtido o token é necessário consumir o recurso da API http://<endereço_acesso>/v1/oauth/token?username=teste@teste.com.br&pasword=123mudar
+      5.2 - Vide documentação em http://3.235.160.57, grupo Token.
+    6 - Após obter o token de acesso é necessário informar no header o seguinte chave/valor.
+      6.1 Chave: x-access-token
+      6.2 Valor: token obtido.
+    7 - Instale o Postgres, após a instalação, cria uma banco como seguinte nome "backoffice", após a criação do banco, restaure o modelo em backup do banco de dados, o mesmo se
+        encontra na pasta do projeto e pasta "backupBD", aguarde a restauração e seu ambiente estará pronto para rodar conforme sua configuração.
