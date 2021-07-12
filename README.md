@@ -73,7 +73,7 @@ Para documentação dos recursos da API, foi utilizado a ferramenta APiDocs para
     com a documentação para visualização web.
         
     Instale o Postgres, após a instalação, crie uma banco de dados com o seguinte nome "backoffice", após a criação do banco, restaure o modelo em backup do banco de dados, o
-    mesmo se encontra na pasta do projeto e pasta "backupBD", aguarde a restauração e seu ambiente estará pronto para rodar conforme sua configuração.
+    mesmo se encontra na pasta do projeto e pasta "backupBD", aguarde a restauração.
 
     Ajuste dos arquivos .env e .env.production conforme o ambiente.    
     1 - Defirnir os parâmetros de acesso ao banco de dados.
