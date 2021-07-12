@@ -87,3 +87,25 @@ Para documentação dos recursos da API, foi utilizado a ferramenta APiDocs para
       7.1 Chave: x-access-token
       7.2 Valor: token obtido.
       7.3 O token tem validade de 10 min. para efeitos de teste
+      
+# Modelo de envio do companie
+    {
+        "razaosocial": "",
+        "nomefantasia": "",
+        "cnpj": "",
+        "inscestadual": "",
+        "inscmunicipal": null,
+        "cep": "",
+        "logradouro": "",
+        "numero": 000,
+        "complemento": "",
+        "bairro": "",
+        "municipio": "",
+        "municipiocodigo": 00000,
+        "uf": "",
+        "ufcodigo": 00,
+        "pais": "",
+        "paiscodigo": "",
+        "email": "",
+        "site": null
+    }
