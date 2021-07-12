@@ -109,3 +109,19 @@ Para documentação dos recursos da API, foi utilizado a ferramenta APiDocs para
         "email": "",
         "site": null
     }
+ # Modelo de envio dos contatos
+    http://localhost:3000/v1/backoffice/companies_contacts/<id_da_empresa_cadastrada>
+     {
+        "nome": "",
+        "apelido": null,
+        "departamento": 0,
+        "setor": 0,
+        "fonefixo": "",
+        "ramal": null,
+        "fonemovel": null,
+        "email": "",
+        "facebook": null,
+        "linkedin": null,
+        "whatsapp": null,
+        "observacao": null
+    }
