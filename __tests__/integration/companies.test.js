@@ -1,4 +1,4 @@
-const { doGetCompanies, doPostCompany } = require('../../src/Dao/Companies.Dao');
+const { doGetCompanies, doPostCompany } = require('../../src/Dao/companies');
 
 describe('Cadastros de Empresas', () => {
 

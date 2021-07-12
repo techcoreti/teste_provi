@@ -1,19 +1,19 @@
 {
   "name": "api-core-applications",
+  "author": "Winston Moreira",
+  "license": "MIT",
   "version": "1.0.0",
   "description": "Camada intermediária, responsável pelo core da aplicação principal.",
   "main": "src/loader.js",
   "scripts": {
     "test": "jest",
     "dev": "set NODE_DEV=dev&& nodemon --inspect src/loader.js --igonore __testes__, __Docs__",
-    "production": "pm2 start src/loader.js --name altec-api-sender"
+    "production": "pm2 start src/loader.js --name api-core-application"
   },
   "apidoc": {
-    "title": "Altec - Api Doc.",
+    "title": "Teste Provi - Api Doc.",
     "sampleUrl": "http://localhost:3000/v1/backoffice"
   },
-  "author": "Winston Moreira",
-  "license": "MIT",
   "devDependencies": {
     "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
@@ -25,9 +25,8 @@
     "pm2": "^4.5.0"
   },
   "dependencies": {
-    "apidoc": "^0.28.1",
     "cors": "^2.8.5",
-    "express-validator": "^6.9.2",
-    "helmet": "^4.3.1"
+    "helmet": "^4.3.1",
+    "jsonwebtoken": "^8.5.1"
   }
 }

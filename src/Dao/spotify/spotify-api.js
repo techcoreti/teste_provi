@@ -24,7 +24,7 @@ const doGetAlbumsSpotify      = async (req) => {
             }  
         } catch (err) {
            if(err.message.indexOf('unique constraint')){
-                return({ code: err.code, message: data });
+                return({ code: 200, message: data });
             }else{
                 return({ code: err.code, message: err.message });
             }

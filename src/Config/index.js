@@ -4,8 +4,9 @@ require('dotenv').config({
 });
 
 const configAPI = {
-    port : process.env.SRV_PORT,
-    name : 'BackOffice API.',
+    secretToken : process.env.SECRET_KEY,
+    port        : process.env.SRV_PORT,
+    name        : 'BackOffice API.',
 };
 
 const configSpotify = {

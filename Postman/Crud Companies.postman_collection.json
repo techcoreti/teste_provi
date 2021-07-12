@@ -1,0 +1,444 @@
+{
+	"info": {
+		"_postman_id": "db8886d5-938e-40a4-aa89-998816720e95",
+		"name": "Crud Companies",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Contacts",
+			"item": [
+				{
+					"name": "Get Contacts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyMzQ1NiIsImlhdCI6MTYyNjA1MjcxNSwiZXhwIjoxNjI2MDU1NzE1fQ.ZT_d_L6896qK_OHX92gzN1tZDgJtbfalEXT7rxeIJQE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/v1/backoffice/companies_contacts/8b49809f-d8ce-461b-b0d6-264ad2d58ad9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"backoffice",
+								"companies_contacts",
+								"8b49809f-d8ce-461b-b0d6-264ad2d58ad9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Contacts",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyMzQ1NiIsImlhdCI6MTYyNjA1MjcxNSwiZXhwIjoxNjI2MDU1NzE1fQ.ZT_d_L6896qK_OHX92gzN1tZDgJtbfalEXT7rxeIJQE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"nome\": \"Arthur Moreira Finamore\",\r\n        \"apelido\": null,\r\n        \"departamento\": 1,\r\n        \"setor\": 1,\r\n        \"fonefixo\": \"00999990000\",\r\n        \"ramal\": null,\r\n        \"fonemovel\": null,\r\n        \"email\": \"winston@techcore.com.br\",\r\n        \"facebook\": null,\r\n        \"linkedin\": null,\r\n        \"whatsapp\": null,\r\n        \"observacao\": null\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/v1/backoffice/companies_contacts/8b49809f-d8ce-461b-b0d6-264ad2d58ad9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"backoffice",
+								"companies_contacts",
+								"8b49809f-d8ce-461b-b0d6-264ad2d58ad9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Request",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyMzQ1NiIsImlhdCI6MTYyNjA1MjcxNSwiZXhwIjoxNjI2MDU1NzE1fQ.ZT_d_L6896qK_OHX92gzN1tZDgJtbfalEXT7rxeIJQE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/v1/backoffice/companies_contacts/8b49809f-d8ce-461b-b0d6-264ad2d58ad9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"backoffice",
+								"companies_contacts",
+								"8b49809f-d8ce-461b-b0d6-264ad2d58ad9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Contacts",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyMzQ1NiIsImlhdCI6MTYyNjA1MjcxNSwiZXhwIjoxNjI2MDU1NzE1fQ.ZT_d_L6896qK_OHX92gzN1tZDgJtbfalEXT7rxeIJQE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"nome\": \"Arthur Moreira Finamore\",\r\n        \"apelido\": \"Arthuresco\",\r\n        \"departamento\": 1,\r\n        \"setor\": 1,\r\n        \"fonefixo\": \"00999990000\",\r\n        \"ramal\": null,\r\n        \"fonemovel\": null,\r\n        \"email\": \"winston@techcore.com.br\",\r\n        \"facebook\": null,\r\n        \"linkedin\": null,\r\n        \"whatsapp\": null,\r\n        \"observacao\": null\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/v1/backoffice/companies_contacts/2a7c09ea-0539-474d-a90a-0f0008c0a182",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"backoffice",
+								"companies_contacts",
+								"2a7c09ea-0539-474d-a90a-0f0008c0a182"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customers",
+			"item": [
+				{
+					"name": "Get Customers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyMzQ1NiIsImlhdCI6MTYyNjA1MjcxNSwiZXhwIjoxNjI2MDU1NzE1fQ.ZT_d_L6896qK_OHX92gzN1tZDgJtbfalEXT7rxeIJQE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/v1/backoffice/companies_contacts/8b49809f-d8ce-461b-b0d6-264ad2d58ad9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"backoffice",
+								"companies_contacts",
+								"8b49809f-d8ce-461b-b0d6-264ad2d58ad9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Costumers",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyMzQ1NiIsImlhdCI6MTYyNjA1MjcxNSwiZXhwIjoxNjI2MDU1NzE1fQ.ZT_d_L6896qK_OHX92gzN1tZDgJtbfalEXT7rxeIJQE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"nome\": \"Arthur Moreira Finamore\",\r\n        \"apelido\": null,\r\n        \"departamento\": 1,\r\n        \"setor\": 1,\r\n        \"fonefixo\": \"00999990000\",\r\n        \"ramal\": null,\r\n        \"fonemovel\": null,\r\n        \"email\": \"winston@techcore.com.br\",\r\n        \"facebook\": null,\r\n        \"linkedin\": null,\r\n        \"whatsapp\": null,\r\n        \"observacao\": null\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/v1/backoffice/companies_contacts/8b49809f-d8ce-461b-b0d6-264ad2d58ad9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"backoffice",
+								"companies_contacts",
+								"8b49809f-d8ce-461b-b0d6-264ad2d58ad9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Costumers",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyMzQ1NiIsImlhdCI6MTYyNjA1MjcxNSwiZXhwIjoxNjI2MDU1NzE1fQ.ZT_d_L6896qK_OHX92gzN1tZDgJtbfalEXT7rxeIJQE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/v1/backoffice/companies_contacts/8b49809f-d8ce-461b-b0d6-264ad2d58ad9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"backoffice",
+								"companies_contacts",
+								"8b49809f-d8ce-461b-b0d6-264ad2d58ad9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Costumers",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyMzQ1NiIsImlhdCI6MTYyNjA1MjcxNSwiZXhwIjoxNjI2MDU1NzE1fQ.ZT_d_L6896qK_OHX92gzN1tZDgJtbfalEXT7rxeIJQE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"nome\": \"Arthur Moreira Finamore\",\r\n        \"apelido\": \"Arthuresco\",\r\n        \"departamento\": 1,\r\n        \"setor\": 1,\r\n        \"fonefixo\": \"00999990000\",\r\n        \"ramal\": null,\r\n        \"fonemovel\": null,\r\n        \"email\": \"winston@techcore.com.br\",\r\n        \"facebook\": null,\r\n        \"linkedin\": null,\r\n        \"whatsapp\": null,\r\n        \"observacao\": null\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/v1/backoffice/companies_contacts/bae555c3-cec7-4b27-b333-f0d67156e6b1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"backoffice",
+								"companies_contacts",
+								"bae555c3-cec7-4b27-b333-f0d67156e6b1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Companies",
+			"item": [
+				{
+					"name": "Get Companies",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyMzQ1NiIsImlhdCI6MTYyNjA1NTkzNCwiZXhwIjoxNjI2MDU4OTM0fQ.mA0D9zJr0tWDrXobg9XzxDbNzpe-BMiyWMU85_qfT6o",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/v1/backoffice/companies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"backoffice",
+								"companies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Companies",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyMzQ1NiIsImlhdCI6MTYyNjA1NDU5NSwiZXhwIjoxNjI2MDU3NTk1fQ.OjUbSnf1EcJrgcaUJ5E_gZOQolb56yxzovXUxzIrpKk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"razaosocial\": \"TechCore Soluções em T.I - ME\",\r\n        \"nomefantasia\": \"TechCore Soluções Ltda\",\r\n        \"cnpj\": \"00014395000181\",\r\n        \"inscestadual\": \"Isento\",\r\n        \"inscmunicipal\": null,\r\n        \"cep\": \"04856999\",\r\n        \"logradouro\": \"Av. Miguel Yunes\",\r\n        \"numero\": 545,\r\n        \"complemento\": \"BL 2 AP 111\",\r\n        \"bairro\": \"Usina Piratininga\",\r\n        \"municipio\": \"São Paulo\",\r\n        \"municipiocodigo\": 1200427,\r\n        \"uf\": \"SP\",\r\n        \"ufcodigo\": 35,\r\n        \"pais\": \"Brasil\",\r\n        \"paiscodigo\": \"1058\",\r\n        \"email\": \"winston@techcore.com.br\",\r\n        \"site\": null\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/v1/backoffice/companies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"backoffice",
+								"companies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Companies",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyMzQ1NiIsImlhdCI6MTYyNjA1NDU5NSwiZXhwIjoxNjI2MDU3NTk1fQ.OjUbSnf1EcJrgcaUJ5E_gZOQolb56yxzovXUxzIrpKk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"razaosocial\": \"TechCore Soluções em T.I - LTDA\",\r\n        \"nomefantasia\": \"TechCore Soluções Ltda\",\r\n        \"cnpj\": \"00014395000181\",\r\n        \"inscestadual\": \"Isento\",\r\n        \"inscmunicipal\": null,\r\n        \"cep\": \"04856999\",\r\n        \"logradouro\": \"Av. Miguel Yunes\",\r\n        \"numero\": 545,\r\n        \"complemento\": \"BL 2 AP 111\",\r\n        \"bairro\": \"Usina Piratininga\",\r\n        \"municipio\": \"São Paulo\",\r\n        \"municipiocodigo\": 1200427,\r\n        \"uf\": \"SP\",\r\n        \"ufcodigo\": 35,\r\n        \"pais\": \"Brasil\",\r\n        \"paiscodigo\": \"1058\",\r\n        \"email\": \"winston@techcore.com.br\",\r\n        \"site\": null,\r\n        \"status\" : 1\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/v1/backoffice/companies/8f9e0494-440f-4dde-a689-ead72fc0e415",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"backoffice",
+								"companies",
+								"8f9e0494-440f-4dde-a689-ead72fc0e415"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Companies",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyMzQ1NiIsImlhdCI6MTYyNjA1NDU5NSwiZXhwIjoxNjI2MDU3NTk1fQ.OjUbSnf1EcJrgcaUJ5E_gZOQolb56yxzovXUxzIrpKk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/v1/backoffice/companies/8b49809f-d8ce-461b-b0d6-264ad2d58ad9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"backoffice",
+								"companies",
+								"8b49809f-d8ce-461b-b0d6-264ad2d58ad9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Gerar Token",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/v1/backoffice/oauth/token?username=teste@teste.com.br&password=123mudar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"backoffice",
+						"oauth",
+						"token"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "teste@teste.com.br"
+						},
+						{
+							"key": "password",
+							"value": "123mudar"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

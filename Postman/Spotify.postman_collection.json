@@ -1,0 +1,53 @@
+{
+	"info": {
+		"_postman_id": "3a1d405b-3857-4631-ab57-b9f36336b8fc",
+		"name": "Spotify",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Albums",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyMzQ1NiIsImlhdCI6MTYyNjA1NTkzNCwiZXhwIjoxNjI2MDU4OTM0fQ.mA0D9zJr0tWDrXobg9XzxDbNzpe-BMiyWMU85_qfT6o",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/backoffice/spotify/albuns/6TLTd0P2CUI0Q29AQ1LyFi",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"backoffice",
+						"spotify",
+						"albuns",
+						"6TLTd0P2CUI0Q29AQ1LyFi"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

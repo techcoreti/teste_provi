@@ -1,9 +1,9 @@
 /**
- * @api {get} /companies_relation/:id Lista Filiais.
+ * @api {get} /companies_relation/{id} Lista Filiais.
  * @apiVersion 1.0.0
  * @apiGroup Companies Relation Matriz-Filiais
  * @apiSampleRequest /companies_relation
- * @apiParam {uuid} id Identificador único de relacionamento.
+ * @apiParam {uuid} id Identificador da empresa vinculada.
  * @apiSuccess {Object[]} json Lista todas as filiais vinculadas a uma matriz.
  * @apiSuccessExample {json} Success
  *  HTTP/1.1 200 OK
@@ -31,11 +31,11 @@
  */
 
 /**
- * @api {post} /companies_relation/:id Efetua o vinculo.
+ * @api {post} /companies_relation/{id} Efetua o vinculo.
  * @apiVersion 1.0.0
  * @apiDescription <span>Contém todas as regras de negócios para que os dados sejam inseridos de forma consistente.</spa>
  * @apiGroup Companies Relation Matriz-Filiais
- * @apiParam {uuid} id Identificador único de relacionamento.
+ * @apiParam {uuid} id Identificador da empresa vinculada. 
  * @apiParam {object} fields Enviados no corpo da request em formato json. 
  * @apiSampleRequest off
  * 
@@ -56,10 +56,10 @@
  */
 
 /**
- * @api {delete} /companies_relation/:id Remover vinculo.
+ * @api {delete} /companies_relation/{id} Remover vinculo.
  * @apiVersion 1.0.0
  * @apiGroup Companies Relation Matriz-Filiais
- * @apiParam {uuid} id Identificador único do registro.
+ * @apiParam {uuid} id Identificador único do registro a ser alterado.
  * @apiSampleRequest off
  * 
  * @apiSuccessExample {json} Success

@@ -1,9 +1,9 @@
 /**
- * @api {get} /companies_contacts Lista contatos.
+ * @api {get} /companies_contacts/{id} Lista contatos.
  * @apiVersion 1.0.0
  * @apiGroup Companies Contacts
  * @apiSampleRequest off
- * @apiParam {uuid} id Identificador único de relacionamento. 
+ * @apiParam {uuid} id Identificador da empresa vinculada. 
  * @apiSuccess {Object[]} body Lista os contatos das empresas.
  * @apiSuccessExample {json} Success
  *  HTTP/1.1 200 OK
@@ -30,11 +30,11 @@
  */
 
 /**
- * @api {post} /companies_contacts Cadastrar contatos.
+ * @api {post} /companies_contacts/{id} Cadastrar contatos.
  * @apiVersion 1.0.0
  * @apiDescription <span>Contém todas as regras de negócios para que os dados sejam inseridos de forma consistente.</spa>
  * @apiGroup Companies Contacts
- * @apiParam {uuid} id Identificador único de relacionamento.
+ * @apiParam {uuid} id Identificador da empresa vinculada. 
  * @apiParam {object} fields Enviados no corpo da request em formato json. 
  * @apiSampleRequest off
  * 
@@ -59,11 +59,11 @@
  */
 
 /**
- * @api {put} /companies_contacts Altera contatos.
+ * @api {put} /companies_contacts/{id} Altera contatos.
  * @apiVersion 1.0.0
  * @apiDescription <span>Contém todas as regras de negócios para que os dados sejam inseridos de forma consistente.</spa>
  * @apiGroup Companies Contacts
- * @apiParam {uuid} id Identificador único do registro em alteração.
+ * @apiParam {uuid} id Identificador do registro a ser alterado.
  * @apiParam {json} fields Enviado no corpo da requisição em formato json.
  * @apiSampleRequest off
  * 
@@ -88,10 +88,10 @@
  */
 
 /**
- * @api {delete} /companies_contacts/:id Excluir contatos.
+ * @api {delete} /companies_contacts/{id} Excluir contatos.
  * @apiVersion 1.0.0
  * @apiGroup Companies Contacts
- * @apiParam {uuid} id Identificador único do registro.
+ * @apiParam {uuid} id Identificador do registro a ser excluido.
  * @apiSampleRequest off
  * 
  * @apiSuccessExample {json} Success

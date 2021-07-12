@@ -79,9 +79,9 @@
  */
 
 /**
- * @api {put} /companies Alterar Cadastros.
+ * @api {put} /companies/{id} Alterar Cadastros.
  * @apiVersion 1.0.0
- * @apiDescription <span>Contém todas as regrass de negócios para que os dados sejam inseridos de forma consistente.</spa>
+ * @apiDescription <span>Contém todas as regras de negócios para que os dados sejam inseridos de forma consistente.</spa>
  * @apiGroup Companies
  * @apiParam {uuid} id Identificador único do registro.
  * @apiParam {Object} fields Enviados no body da requisição em formato json
@@ -108,7 +108,7 @@
  */
 
 /**
- * @api {delete} /companies Excluir Empresas.
+ * @api {delete} /companies/{id} Excluir Empresas.
  * @apiVersion 1.0.0
  * @apiGroup Companies
  * @apiParam {uuid} id Identificador único do registro.

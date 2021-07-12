@@ -1,10 +1,12 @@
 'use strict'
 const express                              = require('express');
 const routes                               = express.Router({ caseSensitive: true });
+const jwt                                  = require('jsonwebtoken');
+const { configAPI }                        = require('../Config');
 const { companiesBl, companiesContactsBl } = require('../Business/companies');
 const { employeeBl, employeesContactsBl }  = require('../Business/employees');
 const { customerBl, customerContactsBl }   = require('../Business/customers');
-const { commonReplaces } = require('../Business/commons/replaces');
+const { commonReplaces }                   = require('../Business/commons/replaces');
 
 const { 
         doGetCompanies, 
@@ -53,6 +55,12 @@ const {
 const Routes = class{
     constructor() {      
         this.routes = routes;
+        
+        // Registra a rota de pedido de token
+        this.getToken();
+
+        // Registra a rotapara se trabalhar com token
+        this.getValidateToken();
 
         // Registra as rotas do cadastro das emrpesas
         this.companies();
@@ -79,7 +87,48 @@ const Routes = class{
         this.albumsSpotify();
         
         // Registra uam rota default caso não seja econtrada
-        this.routesNotFound()
+        this.routesNotFound();
+    }
+    
+    getToken = () => {
+        routes.get('/v1/backoffice/oauth/token', (req,res,) => {
+            const login = req.query;
+
+            if(!login.username && !login.password){
+                res.status(401).send({auth: false, message: 'Informe o usuário e a senha.'});
+                return;
+            }
+             
+            if(login.username != 'teste@teste.com.br' || login.password != '123mudar'){
+                res.status(401).send({auth: false, message: 'Usuário e ou senhas incorretos.'});
+                return;
+            }
+
+            const token = jwt.sign({ id:'123456' }, configAPI.secretToken, {
+                expiresIn: 3000 
+            });
+
+            res.status(200).send({ auth: true, message: token });
+            return;
+            
+        })
+    }
+
+    getValidateToken = () => {
+        this.routes.use('/',(req,res,next) => {
+            const token = req.headers['x-access-token'];
+            if(!token){
+                res.status(401).send({auth: false, message: 'Acesso não autorizado.'})
+            }else{
+                jwt.verify(token, configAPI.secretToken, (err, decode) =>{
+                    if(err){
+                        res.status(401).send({auth: false, message: 'Acesso não autorizado' })
+                    }else{
+                        next();
+                    }
+                })
+            }
+        })
     }
 
     companies = () => {
@@ -323,7 +372,7 @@ const Routes = class{
     }
 
     albumsSpotify = () =>{
-        routes.get('/v1/spotify/albuns/:id_album', albumsSpotifyBusiness, async (req,res) => {
+        routes.get('/v1/backoffice/spotify/albuns/:id_album', albumsSpotifyBusiness, async (req,res) => {
             try {
                 const result = await doGetAlbumsSpotify(req);
                 res.status(result.code).send({ message: result.message })
@@ -339,5 +388,4 @@ const Routes = class{
         });
     }
 };
-
 module.exports = Routes;
